@@ -1,0 +1,35 @@
+.top-desc{
+    background: rgba(0,0,0,0.7);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+.mid-home{
+    min-height: 500px;
+}
+.bottom-rate{
+    height: 60px;
+}
+.button-rate{
+    height: 50px;
+    color: white;
+    border-radius: 20px;
+    background-color: black;
+}
+.bottom-nav{
+    height: 50px;
+
+    background: rgba(255,255,255,0.7);
+}
+.container-width{
+    max-width: 500px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.button-0-formatting{
+    background: none;
+    width: 500px;
+    border: none;
+}
