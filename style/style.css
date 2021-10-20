@@ -1,3 +1,6 @@
+.front-all{
+    min-height: 750px;
+}
 .top-desc{
     background: rgba(0,0,0,0.7);
     border-bottom-left-radius: 20px;
@@ -5,8 +8,9 @@
     color: white;
 }
 .mid-home{
-    min-height: 500px;
+    height: 500px;
 }
+
 .bottom-rate{
     height: 60px;
 }
@@ -28,8 +32,20 @@
     -o-background-size: cover;
     background-size: cover;
 }
+.pref-top{
+    height: 700px;
+}
 .button-0-formatting{
     background: none;
     width: 500px;
     border: none;
+}
+.nav-button{
+    height: 50px;
+    //border: 1px solid black;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+}
+.scrollable{
+    overflow-y: scroll;
 }
