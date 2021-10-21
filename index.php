@@ -33,28 +33,41 @@
                     <button type="button" class="button-0-formatting" data-toggle="modal" data-target="#recipeModal"></button>
 
                     <!-- Modal -->
+                    <?php
+                        $store = "Føtex";
+                        $address = "Vesterbrogade 74-76";
+                        $zip = "5000";
+                        $city = "Odense";
+
+                        $recipeName = "Spaghetti Bologna's ala Claus Meyer";
+                        $ingredient = "Spaghetti";
+                        $amount = "200g";
+                        $instruction = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores consequuntur, culpa doloribus, eligendi eveniet ipsa iste magni nam neque porro quas quasi qui quos sunt velit voluptate. Ad, eius?"
+                    ?>
                     <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-body" id="recipe">
-                                    <h4>Spaghet</h4>
-                                    <h5>Ingredienser</h5>
+                                    <h3><?php echo $store ?></h3>
+                                        <p><?php echo $address ?><br><?php echo $zip ?> <?php echo $city ?></p>
+                                    <h4><?php echo $recipeName ?></h4>
+                                    <h5>Ingredients</h5>
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Ingrediens</th>
-                                                <th scope="col">Mængde</th>
+                                                <th scope="col">Ingredient</th>
+                                                <th scope="col">Amount</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th>Spaghetti</th>
-                                                <td>200g</td>
+                                                <th><?php echo $ingredient ?></th>
+                                                <td><?php echo $amount ?></td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <h5>Fremgangsmåde</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores consequuntur, culpa doloribus, eligendi eveniet ipsa iste magni nam neque porro quas quasi qui quos sunt velit voluptate. Ad, eius?</p>
+                                    <h5>Instructions</h5>
+                                    <p><?php echo $instruction ?></p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -74,6 +87,7 @@
                 <?php include("./templates/navbar.php") ?>
             </div>
         </div>
+
     <script type="text/javascript">
         function printRecipe() {
             var recipe = document.getElementById('recipe');

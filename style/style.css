@@ -32,8 +32,11 @@
     -o-background-size: cover;
     background-size: cover;
 }
-.pref-top{
+.top-gen{
     height: 700px;
+}
+.top-gen-saved{
+    height: 665px;
 }
 .button-0-formatting{
     background: none;
@@ -48,4 +51,7 @@
 }
 .scrollable{
     overflow-y: scroll;
+}
+.slightly-white{
+    background: rgba(255,255,255,0.3);
 }

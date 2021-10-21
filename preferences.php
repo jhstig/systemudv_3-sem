@@ -7,7 +7,7 @@ include("./templates/head.php");
 <div class="row justify-content-around">
     <div class="col border front-all container-width">
         <div class="row ">
-            <div class="col pref-top scrollable">
+            <div class="col top-gen scrollable">
                 <button class="btn btn-block btn-primary my-3">Save changes</button>
                     <!-- Allergies -->
                     <div class='form-group border my-2 px-2 py-1'>
