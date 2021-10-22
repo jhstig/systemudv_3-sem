@@ -1,25 +1,44 @@
 <?php
     $title = "Feeder";
     include("./templates/head.php");
-?>
 
+    $price = 60;
+    $amountPersons = 4;
+    $portionPrice = $price / $amountPersons;
+    $distance = 500;
+    $recipePicture = "./images/spaghet.jpg";
+
+    $store = "Føtex";
+    $address = "Vesterbrogade 74-76";
+    $zip = "5000";
+    $city = "Odense";
+
+    $storeIngredient = "Mel";
+    $storeAmount = "1000g";
+    $storeItemPrice = "8";
+
+    $recipeName = "Spaghetti Bologna's ala Claus Meyer";
+    $ingredient = "Spaghetti";
+    $amount = "200g";
+    $instruction = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores consequuntur, culpa doloribus, eligendi eveniet ipsa iste magni nam neque porro quas quasi qui quos sunt velit voluptate. Ad, eius?";
+?>
         <div class="row  justify-content-around">
-            <div class="col border front-all container-width" style='background-image: url("./images/spaghet.jpg");'>
+            <div class="col border front-all container-width" style='background-image: url(<?php echo $recipePicture; ?>);'>
                 <div class="row top-desc text-center">
                     <div class="col">
                         <div class="row">
                             <div class="col">
-                                500 meter væk
+                                <?php echo $distance ?> meter væk
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                4 portioner
+                                <?php echo $amountPersons; ?> portioner
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                15 kr. pr. portion - 60 kr. i alt
+                                <?php echo $portionPrice; ?> kr. pr. portion - <?php echo $price; ?> kr. i alt
                             </div>
                         </div>
                         <div class="row">
@@ -34,48 +53,11 @@
 
                     <!-- Modal -->
                     <?php
-                        $store = "Føtex";
-                        $address = "Vesterbrogade 74-76";
-                        $zip = "5000";
-                        $city = "Odense";
 
-                        $recipeName = "Spaghetti Bologna's ala Claus Meyer";
-                        $ingredient = "Spaghetti";
-                        $amount = "200g";
-                        $instruction = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores consequuntur, culpa doloribus, eligendi eveniet ipsa iste magni nam neque porro quas quasi qui quos sunt velit voluptate. Ad, eius?"
+
+                        include("./components/recipeModal.php");
                     ?>
-                    <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body" id="recipe">
-                                    <h3><?php echo $store ?></h3>
-                                        <p><?php echo $address ?><br><?php echo $zip ?> <?php echo $city ?></p>
-                                    <h4><?php echo $recipeName ?></h4>
-                                    <h5>Ingredients</h5>
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Ingredient</th>
-                                                <th scope="col">Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th><?php echo $ingredient ?></th>
-                                                <td><?php echo $amount ?></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <h5>Instructions</h5>
-                                    <p><?php echo $instruction ?></p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" onclick="printRecipe();">Print</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <!-- modal end -->
 
                 </div>
@@ -98,5 +80,7 @@
         }
     </script>
 <?php include("./templates/foot.php");
+
 ?>
+
 

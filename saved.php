@@ -26,6 +26,10 @@ include("./templates/head.php");
                             $zip = "5200";
                             $city = "Odense";
 
+                            $storeIngredient = "Mel";
+                            $storeAmount = "1000g";
+                            $storeItemPrice = "8";
+
                             $recipeName = "Pizza Margarita";
                             $ingredient = "Mel";
                             $amount = "250g";
@@ -34,7 +38,7 @@ include("./templates/head.php");
                             <h3>Saved recipes</h3>
                             <!-- recipe item -->
                             <?php
-                                include("./components/list-item-saved.php")
+                                include("./components/list-item.php")
                             ?>
                         </div>
 
@@ -45,6 +49,10 @@ include("./templates/head.php");
                             $zip = "5000";
                             $city = "Odense";
 
+                            $storeIngredient = "Spaghetti";
+                            $storeAmount = "200g";
+                            $storeItemPrice = "8";
+
                             $recipeName = "Spaghetti Bologna's ala Claus Meyer";
                             $ingredient = "Spaghetti";
                             $amount = "200g";
@@ -53,7 +61,7 @@ include("./templates/head.php");
                             <h3>Favorite recipes</h3>
                             <?php
 
-                            include("./components/list-item-fav.php")
+                                include("./components/list-item.php")
                             ?>
 
                         </div>
@@ -63,7 +71,6 @@ include("./templates/head.php");
                     <?php include("./templates/navbar.php") ?>
                 </div>
             </div>
-
         </div>
     </div>
     <script type="text/javascript">
