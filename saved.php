@@ -73,15 +73,15 @@ include("./templates/head.php");
                         $recipeTitle = $recipes[$i]['title'];
                         $recipeItems = getRecipeItems($recipeId);
 
-                        echo "<h3>$recipeTitle</h3><br>"; */?>
+                        echo "<h3>$recipeTitle</h3><br>"; ?>
                         <table class="table">
                             <thead>
-                            <tr>
-                                <th scope="col">Food item</th>
-                                <th scope="col">Amount</th>
-                                <th scope="col">Measurement</th>
-                                <th scope="col">Price</th>
-                            </tr>
+                                <tr>
+                                    <th scope="col">Food item</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Measurement</th>
+                                    <th scope="col">Price</th>
+                                </tr>
                             </thead>
                             <tbody>
                             <?php for($x=0;$x<count($recipeItems);$x++){
@@ -89,15 +89,15 @@ include("./templates/head.php");
                                 $foodItemAmount = $recipeItems[$x]['amount'];
                                 $foodItemAmountMeasurementId = $recipeItems[$x]['amount_measurement'];
                                 $foodItemTitle = getFoodItemDetails($foodItemId)[0]['food_item_title'];
-                                $standardItem = getFoodItemDetails($foodItemId)[0]['standard_item'];
-                                debug(convertMeasurement($foodItemAmountMeasurementId));
-                                $realMeasurement = convertMeasurement($foodItemAmountMeasurementId)[0]['measurement'];
+                                //$standardItem = getFoodItemDetails($foodItemId)[0]['standard_item'];
+                                //debug(convertMeasurement($foodItemAmountMeasurementId));
+                                //$realMeasurement = convertMeasurement($foodItemAmountMeasurementId)[0]['measurement'];
                                 //$storesWithItem = getAllStoreItems($foodItemId);
                                 echo "<br>";
                                 ?>
                                 <tr>
-                                    <th><?php //echo $foodItemTitle ?></th>
-                                    <td><?php //echo $foodItemAmount ?></td>
+                                    <th><?php echo $foodItemTitle ?></th>
+                                    <td><?php echo $foodItemAmount ?></td>
                                     <td><?php //echo $realMeasurement ?></td>
 
                                 </tr>
@@ -113,17 +113,17 @@ include("./templates/head.php");
 
                             $storesWithItem = getAllStoreItems($foodItemId);
                             echo "<br>";
-                        } */?>
+                        }*/
 
-                        <!--//debug(getFoodItemName(getRecipeItems($i+1)[$i]['food_item_id'])[0]);
-                    }-->
-                    <?php /*
+                        //debug(getFoodItemName(getRecipeItems($i+1)[$i]['food_item_id'])[0]);
+                    } ?>
+                    <?php
                     for($i=0;$i<count($recipes);$i++){
                         $recipeId = $recipes[$i]['idrecipe'];
                         $recipeTitle = $recipes[$i]['title'];
                         $recipeItems = getRecipeItems($recipeId);
 
-                        echo $recipeTitle."<br>";
+                        echo $recipeTitle;//."<br>";
 
                         for($x=0;$x<count($recipeItems);$x++){
                             $foodItemId = $recipeItems[$x]['food_item_id'];
@@ -139,14 +139,14 @@ include("./templates/head.php");
                                 $chainName = getChainName($chainId)[0]['chain'];
                                 echo "<br> Kan købes i: ".$chainName." til ".$price." kr.";
                             }
-                            echo "<br>";
+                            //echo "<br>";
                         }
 
                         //debug(getFoodItemName(getRecipeItems($i+1)[$i]['food_item_id'])[0]);
                     }
                     //debug(getAllRecipes());
 
-                    */?>
+                    ?>
 
                     <?php include("./templates/navbar.php") ?>
                 </div>

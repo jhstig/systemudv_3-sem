@@ -8,7 +8,7 @@ if($inclDB == true) {
     define('DBHOST', 'localhost');
     define('DBPASS', 'root');
     define('DBUSER', 'root');
-    define('DBNAME', 'feederdb_new');
+    define('DBNAME', 'feeder');
 
     connect();
 }
