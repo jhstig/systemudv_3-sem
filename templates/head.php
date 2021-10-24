@@ -1,4 +1,19 @@
+<?php
+$inclDB = true;
 
+include("scripts/functions.php");
+
+if($inclDB == true) {
+
+    define('DBHOST', 'localhost');
+    define('DBPASS', 'root');
+    define('DBUSER', 'root');
+    define('DBNAME', 'feederdb_new');
+
+    connect();
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
