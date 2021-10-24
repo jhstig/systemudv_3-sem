@@ -66,7 +66,7 @@ include("./templates/head.php");
 
                         </div>
                     </div>
-                    <?php /*
+                    <?php
                     $recipes = getAllRecipes();
                     for($i=0;$i<count($recipes);$i++){
                         $recipeId = $recipes[$i]['idrecipe'];
@@ -74,7 +74,7 @@ include("./templates/head.php");
                         $recipeItems = getRecipeItems($recipeId);
 
                         echo "<h3>$recipeTitle</h3><br>"; */?>
-                        <!--<table class="table">
+                        <table class="table">
                             <thead>
                             <tr>
                                 <th scope="col">Food item</th>
@@ -83,8 +83,8 @@ include("./templates/head.php");
                                 <th scope="col">Price</th>
                             </tr>
                             </thead>
-                            <tbody>-->
-                            <?php /* for($x=0;$x<count($recipeItems);$x++){
+                            <tbody>
+                            <?php for($x=0;$x<count($recipeItems);$x++){
                                 $foodItemId = $recipeItems[$x]['food_item_id'];
                                 $foodItemAmount = $recipeItems[$x]['amount'];
                                 $foodItemAmountMeasurementId = $recipeItems[$x]['amount_measurement'];
@@ -94,16 +94,16 @@ include("./templates/head.php");
                                 $realMeasurement = convertMeasurement($foodItemAmountMeasurementId)[0]['measurement'];
                                 //$storesWithItem = getAllStoreItems($foodItemId);
                                 echo "<br>";
-                                */?>
-                                <!--<tr>
+                                ?>
+                                <tr>
                                     <th><?php //echo $foodItemTitle ?></th>
                                     <td><?php //echo $foodItemAmount ?></td>
                                     <td><?php //echo $realMeasurement ?></td>
 
                                 </tr>
-                            <?php //} ?>
+                            <?php } ?>
                             </tbody>
-                        </table>-->
+                        </table>
 
                         <?php /*
                             $foodItemId = $recipeItems[$x]['food_item_id'];
